@@ -1,4 +1,4 @@
-package  lifestylecoach.rest;
+package lifestylecoach.rest;
 
 import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -27,9 +27,9 @@ public class Main {
             hostname = "localhost";
         }
 
-        URI BASE_URI = new URI(protocol + hostname + port+"lifestyle-coach-process-centric/");
+        URI BASE_URI = new URI(protocol + hostname + port + "lifestylecoach-process-centric/");
 
-        System.out.println("Starting assignment2 standalone HTTP server...");
+        System.out.println("Starting lifestylecoach-process-centric standalone HTTP server...");
         JdkHttpServerFactory.createHttpServer(BASE_URI, createApp());
         System.out.println("Server started on " + BASE_URI + "\n[kill the process to exit]");
     }
