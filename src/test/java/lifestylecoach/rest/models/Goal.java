@@ -8,7 +8,7 @@ import javax.ws.rs.Produces;
  * Created by matteo on 10/05/17.
  */
 
-@Path("/goals")
+@Path("/goal")
 public class Goal {
 
     @GET

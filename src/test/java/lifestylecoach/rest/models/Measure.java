@@ -1,8 +1,7 @@
 package lifestylecoach.rest.models;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 
 /**
  * Created by matteo on 10/05/17.
@@ -14,6 +13,18 @@ public class Measure {
     @GET
     @Produces("application/json")
     public String show() {
+        System.out.println("/measure");
         return "{ \"hello\" : \"TODO show measure\" }"; //TODO
+    }
+
+    @POST
+    @Path("new")
+    @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public String newMeasure(String text) {
+        //TODO new person
+        System.out.println(text);
+        System.out.println("/measure/now");
+        return "TODO";
     }
 }
