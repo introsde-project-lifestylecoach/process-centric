@@ -17,6 +17,21 @@ public class Measure {
         return "{ \"hello\" : \"TODO show measure\" }"; //TODO
     }
 
+    @GET
+    @Path("show/{type}")
+    @Produces("application/json")
+    public String showByType(@PathParam("type") String type) {
+        System.out.println("/measure/now" + type);
+        return "{\"measures\": " +
+                "[" +
+                "{\"type\":\"weight\",\"value\":123}," +
+                "{\"type\":\"weight\",\"value\":4324}," +
+                "{\"type\":\"weight\",\"value\":543}" +
+                "]" +
+                "}";
+    }
+
+
     @POST
     @Path("new")
     @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
