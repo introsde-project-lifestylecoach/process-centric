@@ -21,7 +21,7 @@ public class Measure {
     @Path("show/{type}")
     @Produces("application/json")
     public String showByType(@PathParam("type") String type) {
-        System.out.println("/measure/now" + type);
+        System.out.println("/measure/new" + type);
         return "{\"measures\": " +
                 "[" +
                 "{\"type\":\"weight\",\"value\":123}," +
@@ -30,7 +30,6 @@ public class Measure {
                 "]" +
                 "}";
     }
-
 
     @POST
     @Path("new")
