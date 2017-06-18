@@ -1,14 +1,11 @@
-package lifestylecoach.rest.models;
+package lifecoach.provider.resource;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-/**
- * Created by matteo on 10/05/17.
- */
 
 @Path("/measure")
-public class Measure {
+public class MeasureResource {
 
     @GET
     @Produces("application/json")

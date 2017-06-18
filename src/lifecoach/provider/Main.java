@@ -1,4 +1,4 @@
-package lifestylecoach.rest;
+package lifecoach.provider;
 
 import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -8,20 +8,20 @@ import java.net.InetAddress;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-/**
- * Created by matteo on 10/05/17.
- */
-public class Main {
-
+public class Main 
+{
     public static void main(String[] args) throws IllegalArgumentException, IOException, URISyntaxException
     {
         String protocol = "http://";
         String port_value = "5700";
+        
         if (String.valueOf(System.getenv("PORT")) != "null"){
             port_value=String.valueOf(System.getenv("PORT"));
         }
+        
         String port = ":"+port_value+"/";
         String hostname = InetAddress.getLocalHost().getHostAddress();
+        
         if (hostname.equals("127.0.0.1"))
         {
             hostname = "localhost";
@@ -40,3 +40,4 @@ public class Main {
     }
 
 }
+

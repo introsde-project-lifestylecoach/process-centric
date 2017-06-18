@@ -1,15 +1,11 @@
-package lifestylecoach.rest.models;
+package lifecoach.provider.resource;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-/**
- * Created by matteo on 15/06/17.
- */
-
 
 @Path("/user")
-public class User {
+public class PersonResource {
 
     @POST
     @Path("new")
@@ -35,6 +31,5 @@ public class User {
     public String getProfile() {
         return "{ \"uid\":123231,\"name\":\"Giacomo\",\"surname\":\"Leopardi\",\"height\":\"160\",\"weight\":\"60\"}"; //TODO
     }
-
-
 }
+
