@@ -94,7 +94,7 @@ public interface Storage {
      * @param personId
      * @param measureTypeId
      * @return
-     *     returns Measure
+     *     returns ResMeasure
      */
     @WebMethod
     @WebResult(name = "measure", targetNamespace = "")
@@ -114,7 +114,7 @@ public interface Storage {
      * @param personId
      * @param measureTypeId
      * @return
-     *     returns java.util.List<Measure>
+     *     returns java.util.List<ResMeasure>
      */
     @WebMethod
     @WebResult(name = "measureList", targetNamespace = "")
@@ -131,7 +131,7 @@ public interface Storage {
      * 
      * @param personId
      * @return
-     *     returns java.util.List<Measure>
+     *     returns java.util.List<ResMeasure>
      */
     @WebMethod
     @WebResult(name = "measureList", targetNamespace = "")
@@ -226,7 +226,7 @@ public interface Storage {
      * @param personId
      * @param measureTypeId
      * @return
-     *     returns Goal
+     *     returns ResGoal
      */
     @WebMethod
     @WebResult(name = "goal", targetNamespace = "")
@@ -246,7 +246,7 @@ public interface Storage {
      * @param personId
      * @param measureTypeId
      * @return
-     *     returns java.util.List<Goal>
+     *     returns java.util.List<ResGoal>
      */
     @WebMethod
     @WebResult(name = "goalList", targetNamespace = "")

@@ -1,42 +1,28 @@
 package lifestylecoach.rest.models;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-
 /**
- * Created by matteo on 10/05/17.
+ * Created by matteo on 16/06/17.
  */
-
-@Path("/goal")
 public class Goal {
 
-    @GET
-    @Produces("application/json")
-    public String show() {
-        return "{ \"hello\" : \"TODO show goals\" }"; //TODO
+    public String title;
+    public String description;
+    public Boolean status;
+    public String condition;
+
+    public Goal() {
+
     }
 
-    @POST
-    @Path("new/{uid}/{oldTitle}")
-    @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public String newUser(@PathParam("uid") Integer uid, @PathParam("oldTitle") String oldTitle, String goaljson) {
-        //TODO new person
-        System.out.println(uid);
-        System.out.println(oldTitle);
-        System.out.println(goaljson);
-
-        return "{\"success\":true}"; //TODO
+    public Goal(String title, String description, Boolean status, String condition) {
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.condition = condition;
     }
 
-
-    @GET
-    @Path("show/{id}")
-    @Produces("application/json")
-    public String showGoals(@PathParam("id") String type) {
-        //return "[{\"title\":\"title1\",\"description\":\"description1\",\"status\":false},{\"title\":\"title2\",\"description\":\"description2\",\"status\":false}]";
-        return "[{\"title\":\"Walk\",\"description\":\"Make at least 1000 steps per day\",\"status\":true}," +
-                "{\"title\":\"Lose weight\",\"description\":\"Don't be fat (less than 100 kg)!\",\"status\":true}]";
+    public String formattedText() {
+        return this.title + "\n" + this.description + "\n" + this.status + "\n";
     }
 
 }
