@@ -1,7 +1,15 @@
 package lifestylecoach.rest.resources;
 
+import com.google.gson.Gson;
+import lifestylecoach.rest.models.Measure;
+import lifestylecoach.storage.StorageClient;
+import lifestylecoach.ws.Storage;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by matteo on 10/05/17.
@@ -18,17 +26,36 @@ public class ResMeasure {
     }
 
     @GET
-    @Path("show/{type}")
+    @Path("show/{id}/{type}")
     @Produces("application/json")
-    public String showByType(@PathParam("type") String type) {
+    public String showByType(@PathParam("id") Integer uid, @PathParam("type") String type) {
         System.out.println("/measure/new" + type);
-        return "{\"measures\": " +
-                "[" +
-                "{\"type\":\"weight\",\"value\":123}," +
-                "{\"type\":\"weight\",\"value\":4324}," +
-                "{\"type\":\"weight\",\"value\":543}" +
-                "]" +
-                "}";
+
+        StorageClient storageClient = new StorageClient();
+        Storage storage = storageClient.getStorage();
+
+        List<lifestylecoach.ws.Measure> measures = storage.getMeasureHistory(uid, type);
+
+        System.out.println(uid + " " + type);
+
+        ArrayList<Measure> jsonMeasures = new ArrayList<Measure>();
+
+
+        System.out.println(measures.size());
+
+        Iterator it = measures.iterator();
+        int i = 0;
+        while (it.hasNext() && i < 15) {
+            lifestylecoach.ws.Measure measure = (lifestylecoach.ws.Measure) it.next();
+            jsonMeasures.add(new Measure(uid,
+                    measure.getMeasureType().getType(),
+                    Float.toString(measure.getValue()),
+                    measure.getDate()));
+        }
+
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(jsonMeasures, jsonMeasures.getClass()));
+        return gson.toJson(jsonMeasures, jsonMeasures.getClass());
     }
 
     @POST
@@ -39,6 +66,15 @@ public class ResMeasure {
         //TODO new person
         System.out.println(text);
         System.out.println("/measure/now");
+
+        Gson gson = new Gson();
+        Measure measure = gson.fromJson(text, Measure.class);
+
+        lifestylecoach.ws.Measure pMeasure = new lifestylecoach.ws.Measure();
+        pMeasure.setValue(Float.parseFloat(measure.measureValue));
+        // pMeasure.setMeasureType(measure.measureType);
+        // pMeasure.setDate();
+
         return "TODO";
     }
 }
