@@ -11,6 +11,7 @@ import lifestylecoach.ws.Storage;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -40,6 +41,8 @@ public class ResMeasure {
         List<lifestylecoach.ws.Measure> measures = storage.getMeasureHistory(uid, type);
         ArrayList<Measure> jsonMeasures = new ArrayList<Measure>();
 
+        Collections.reverse(measures);
+
         Iterator it = measures.iterator();
         int i = 0;
         while (it.hasNext() && i < 15) {
@@ -48,6 +51,7 @@ public class ResMeasure {
                     measure.getMeasureType().getType(),
                     Float.toString(measure.getValue()),
                     measure.getDate()));
+            i++;
         }
 
         Gson gson = new Gson();
