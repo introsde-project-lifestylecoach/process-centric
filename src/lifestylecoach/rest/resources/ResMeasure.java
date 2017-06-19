@@ -1,8 +1,11 @@
 package lifestylecoach.rest.resources;
 
 import com.google.gson.Gson;
+import lifestylecoach.business.BusinessClient;
 import lifestylecoach.rest.models.Measure;
 import lifestylecoach.storage.StorageClient;
+import lifestylecoach.ws.Business;
+import lifestylecoach.ws.MeasureType;
 import lifestylecoach.ws.Storage;
 
 import javax.ws.rs.*;
@@ -35,13 +38,7 @@ public class ResMeasure {
         Storage storage = storageClient.getStorage();
 
         List<lifestylecoach.ws.Measure> measures = storage.getMeasureHistory(uid, type);
-
-        System.out.println(uid + " " + type);
-
         ArrayList<Measure> jsonMeasures = new ArrayList<Measure>();
-
-
-        System.out.println(measures.size());
 
         Iterator it = measures.iterator();
         int i = 0;
@@ -71,9 +68,18 @@ public class ResMeasure {
         Measure measure = gson.fromJson(text, Measure.class);
 
         lifestylecoach.ws.Measure pMeasure = new lifestylecoach.ws.Measure();
+        MeasureType type = new MeasureType();
+        type.setType(measure.measureType);
+
         pMeasure.setValue(Float.parseFloat(measure.measureValue));
-        // pMeasure.setMeasureType(measure.measureType);
-        // pMeasure.setDate();
+        pMeasure.setMeasureType(type);
+        pMeasure.setDate("");
+
+        //CALL BUSINESS SERVICE
+        BusinessClient businessClient = new BusinessClient();
+        Business business = businessClient.getBusiness();
+
+        business.createMeasure(measure.uid, pMeasure);
 
         return "TODO";
     }

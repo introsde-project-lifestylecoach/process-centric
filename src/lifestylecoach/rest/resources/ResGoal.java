@@ -20,8 +20,10 @@ public class ResGoal {
     @Path("new/{uid}/{oldTitle}")
     @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public String newUser(@PathParam("uid") Integer uid, @PathParam("oldTitle") String oldTitle, String goaljson) {
+    public String newGoal(@PathParam("uid") Integer uid, @PathParam("oldTitle") String oldTitle, String goaljson) {
         //TODO new person
+
+        System.out.println("======================");
         System.out.println(uid);
         System.out.println(oldTitle);
         System.out.println(goaljson);

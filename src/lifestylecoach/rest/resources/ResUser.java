@@ -1,10 +1,12 @@
 package lifestylecoach.rest.resources;
 
 import com.google.gson.Gson;
+import lifestylecoach.business.BusinessClient;
 import lifestylecoach.rest.models.Success;
 import lifestylecoach.rest.models.User;
 import lifestylecoach.rest.models.UserMeasure;
 import lifestylecoach.storage.StorageClient;
+import lifestylecoach.ws.Business;
 import lifestylecoach.ws.Measure;
 import lifestylecoach.ws.Person;
 import lifestylecoach.ws.Storage;
@@ -26,7 +28,6 @@ public class ResUser {
     @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public String newUser(String json) {
-        //TODO new person
 
         System.out.println("/user/new");
         System.out.println(json);
@@ -40,11 +41,11 @@ public class ResUser {
         person.setFirstname(user.name);
         person.setLastname(user.surname);
 
-        // TODO CHIAMA BUSINESS
-        // service
-        //StorageClient storageClient = new StorageClient();
-        //Storage storage = storageClient.getStorage();
-        //storage.createPerson(person);
+        // CALL business service
+        BusinessClient businessClient = new BusinessClient();
+        Business business = businessClient.getBusiness();
+
+        business.createPerson(person);
 
         //Check if the new person operation is sucessfull
         return existUser(user.uid);
