@@ -70,7 +70,27 @@ public class ResGoal {
     @GET
     @Path("show/{id}")
     @Produces("application/json")
-    public String showGoals(@PathParam("id") String type) {
+    public String showGoals(@PathParam("id") Integer uid) {
+
+        /*StorageClient storageClient = new StorageClient();
+        Storage storage = storageClient.getStorage();
+
+        BusinessClient businessClient = new BusinessClient();
+        Business business =
+
+        List<lifestylecoach.ws.storage.Goal> goals = storage.getGoalsById(uid);
+
+        Iterator it;
+        it = goals.iterator();
+
+        List<Goal> goalsRest = new ArrayList<Goal>();
+        while(it.hasNext()) {
+            lifestylecoach.ws.storage.Goal goal = (lifestylecoach.ws.storage.Goal) it.next();
+            goalsRest.add(new Goal(goal.getTitle(), goal.getDescription(), goal.get))
+        }
+        */
+
+
         //return "[{\"title\":\"title1\",\"description\":\"description1\",\"status\":false},{\"title\":\"title2\",\"description\":\"description2\",\"status\":false}]";
         return "[{\"title\":\"Walk\",\"description\":\"Make at least 1000 steps per day\",\"status\":true}," +
                 "{\"title\":\"Lose weight\",\"description\":\"Don't be fat (less than 100 kg)!\",\"status\":true}]";

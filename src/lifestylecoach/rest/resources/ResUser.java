@@ -6,6 +6,7 @@ import lifestylecoach.rest.models.Success;
 import lifestylecoach.rest.models.User;
 import lifestylecoach.rest.models.UserMeasure;
 import lifestylecoach.storage.StorageClient;
+import lifestylecoach.ws.business.Bmi;
 import lifestylecoach.ws.business.Business;
 import lifestylecoach.ws.business.Person;
 import lifestylecoach.ws.storage.Measure;
@@ -48,7 +49,8 @@ public class ResUser {
         BusinessClient businessClient = new BusinessClient();
         Business business = businessClient.getBusiness();
 
-        business.createPerson(person);
+        //business.createPerson(person);
+        business.updatePerson(person);
 
         //Check if the new person operation is sucessfull
         return existUser(user.uid);
@@ -120,12 +122,11 @@ public class ResUser {
         BusinessClient businessClient = new BusinessClient();
         Business business = businessClient.getBusiness();
 
-        String res = "TODO";
-        /*String res = business.getBmi(uid);
+        Bmi bmi = business.getBmi(uid); //weight height sex age waist hip*/
 
-        StorageClient storageClient = new StorageClient();
-        storageClient.getStorage().getBmi(); //weight height sex age waist hip*/
+        Gson gson = new Gson();
+        String bmijson = gson.toJson(bmi, bmi.getClass());
 
-        return res; //TODO
+        return bmijson;
     }
 }
