@@ -6,10 +6,10 @@ import lifestylecoach.rest.models.Success;
 import lifestylecoach.rest.models.User;
 import lifestylecoach.rest.models.UserMeasure;
 import lifestylecoach.storage.StorageClient;
-import lifestylecoach.ws.Business;
-import lifestylecoach.ws.Measure;
-import lifestylecoach.ws.Person;
-import lifestylecoach.ws.Storage;
+import lifestylecoach.ws.business.Business;
+import lifestylecoach.ws.business.Person;
+import lifestylecoach.ws.storage.Measure;
+import lifestylecoach.ws.storage.Storage;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -29,7 +29,6 @@ public class ResUser {
     @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public String newUser(String json) {
 
-        System.out.println("/user/new");
         System.out.println(json);
 
         Gson gson = new Gson();
@@ -40,6 +39,10 @@ public class ResUser {
         person.setIdPerson(user.uid);
         person.setFirstname(user.name);
         person.setLastname(user.surname);
+        person.setSex(user.sex);
+        person.setBirthdate(user.birthdate);
+        person.setWaist(Float.parseFloat(user.waist));
+        person.setHip(Float.parseFloat(user.hip));
 
         // CALL business service
         BusinessClient businessClient = new BusinessClient();
@@ -61,7 +64,7 @@ public class ResUser {
         StorageClient storageClient = new StorageClient();
         Storage storage = storageClient.getStorage();
 
-        Person person = storage.readPerson(id);
+        lifestylecoach.ws.storage.Person person = storage.readPerson(id);
 
         Gson gson = new Gson();
 
@@ -80,7 +83,7 @@ public class ResUser {
         StorageClient storageClient = new StorageClient();
         Storage storage = storageClient.getStorage();
 
-        Person person = storage.readPerson(id);
+        lifestylecoach.ws.storage.Person person = storage.readPerson(id);
         List<Measure> measures = storage.getLastMeasure(id);
 
         String height = "0";
@@ -96,6 +99,10 @@ public class ResUser {
         UserMeasure user = new UserMeasure(person.getIdPerson(),
                 person.getFirstname(),
                 person.getLastname(),
+                person.getSex(),
+                person.getBirthdate(),
+                String.valueOf(person.getWaist()),
+                String.valueOf(person.getHip()),
                 height,
                 weight);
 
@@ -105,5 +112,20 @@ public class ResUser {
         return res;
     }
 
+    @GET
+    @Path("bmi/{id}")
+    @Produces("application/json")
+    public String getBmi(@PathParam("id") Integer uid) {
 
+        BusinessClient businessClient = new BusinessClient();
+        Business business = businessClient.getBusiness();
+
+        String res = "TODO";
+        /*String res = business.getBmi(uid);
+
+        StorageClient storageClient = new StorageClient();
+        storageClient.getStorage().getBmi(); //weight height sex age waist hip*/
+
+        return res; //TODO
+    }
 }

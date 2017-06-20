@@ -1,5 +1,12 @@
 package lifestylecoach.rest.resources;
 
+import com.google.gson.Gson;
+import lifestylecoach.business.BusinessClient;
+import lifestylecoach.rest.models.Goal;
+import lifestylecoach.ws.business.Business;
+import lifestylecoach.ws.business.GoalType;
+import lifestylecoach.ws.business.MeasureType;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -27,6 +34,34 @@ public class ResGoal {
         System.out.println(uid);
         System.out.println(oldTitle);
         System.out.println(goaljson);
+
+        //CALL BUSINESS SERVICE
+        BusinessClient businessClient = new BusinessClient();
+        Business business = businessClient.getBusiness();
+
+        Gson gson = new Gson();
+        Goal newGoal = gson.fromJson(goaljson, Goal.class);
+
+        lifestylecoach.ws.business.Goal wsGoal = new lifestylecoach.ws.business.Goal();
+        wsGoal.setTitle(newGoal.title);
+
+        // parse condition
+        String condition[] = newGoal.condition.split(" ");
+        String cType = condition[0].toLowerCase();
+        String cIncrease = condition[1];
+        Float cValue = Float.valueOf(condition[2]);
+
+        MeasureType measureType = new MeasureType();
+        measureType.setType(cType);
+        wsGoal.setMeasureType(measureType);
+
+        wsGoal.setValue(cValue);
+
+        GoalType goalType = new GoalType();
+        goalType.setType(cIncrease);
+        wsGoal.setGoalType(goalType);
+
+        System.out.println(business.updateGoal(uid, wsGoal, oldTitle));
 
         return "{\"success\":true}"; //TODO
     }

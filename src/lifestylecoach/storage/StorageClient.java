@@ -1,8 +1,7 @@
 package lifestylecoach.storage;
 
-
-import lifestylecoach.ws.Storage;
-import lifestylecoach.ws.StorageService;
+import lifestylecoach.ws.storage.Storage;
+import lifestylecoach.ws.storage.StorageService;
 
 /**
  * Created by matteo on 18/06/17.

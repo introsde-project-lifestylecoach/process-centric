@@ -1,8 +1,7 @@
 package lifestylecoach.business;
 
-
-import lifestylecoach.ws.Business;
-import lifestylecoach.ws.BusinessService;
+import lifestylecoach.ws.business.Business;
+import lifestylecoach.ws.business.BusinessService;
 
 /**
  * Created by matteo on 19/06/17.
@@ -15,7 +14,6 @@ public class BusinessClient {
     private BusinessService businessService;
 
     public BusinessClient() {
-
         this.businessService = new BusinessService();
         business = businessService.getBusinessImplementationPort();
     }
