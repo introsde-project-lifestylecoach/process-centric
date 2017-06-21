@@ -132,7 +132,19 @@ public class ResGoal {
             while (it.hasNext()) {
                 GoalBusiness goalBusiness = (GoalBusiness) it.next();
                 lifestylecoach.ws.business.Goal goal = goalBusiness.getGoal();
-                goalsRest.add(new Goal(goal.getTitle(), goal.getDescription(), goalBusiness.isDone(), goal.getDate()));
+
+                String condition = "";
+                if (goal.getGoalType().getType().equals("Increase"))
+                    condition = goal.getMeasureType().getType()
+                            + " > "
+                            + goal.getValue();
+                else
+                    condition = goal.getMeasureType().getType()
+                            + " < "
+                            + goal.getValue();
+
+
+                goalsRest.add(new Goal(goal.getTitle(), goal.getDescription(), goalBusiness.isDone(), condition));
             }
             return gson.toJson(goalsRest, goalsRest.getClass());
         } else {
