@@ -134,7 +134,7 @@ public class ResGoal {
                 lifestylecoach.ws.business.Goal goal = goalBusiness.getGoal();
 
                 String condition = "";
-                if (goal.getGoalType().getType().equals("Increase"))
+                if (goal.getGoalType().getType().equals("increase"))
                     condition = goal.getMeasureType().getType()
                             + " > "
                             + goal.getValue();
