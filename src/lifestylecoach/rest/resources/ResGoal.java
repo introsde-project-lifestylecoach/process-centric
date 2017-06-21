@@ -28,6 +28,25 @@ public class ResGoal {
         return "{ \"hello\" : \"TODO show goals\" }"; //TODO
     }
 
+    @GET
+    @Path("delete/{uid}/{title}")
+    @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public String deleteGoal(@PathParam("uid") Integer uid, @PathParam("title") String title) {
+        BusinessClient businessClient = new BusinessClient();
+        Business business = businessClient.getBusiness();
+
+        System.out.println("delete goal");
+
+        Gson gson = new Gson();
+        if (business.deleteGoalByTitle(uid, title.replace("_", " ")) == 0)
+            return gson.toJson(new Success(true));
+        else
+            return gson.toJson(new Success(false));
+
+    }
+
+
     @POST
     @Path("new/{uid}/{oldTitle}")
     @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
