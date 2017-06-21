@@ -13,5 +13,4 @@ public class Measure {
         this.measureValue = measureValue;
         this.date = date;
     }
-
 }

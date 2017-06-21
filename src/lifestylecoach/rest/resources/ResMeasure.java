@@ -65,9 +65,9 @@ public class ResMeasure {
     @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public String newMeasure(String text) {
-        //TODO new person
+
         System.out.println(text);
-        System.out.println("/measure/now");
+        System.out.println("/measure/new");
 
         Gson gson = new Gson();
         Measure measure = gson.fromJson(text, Measure.class);
