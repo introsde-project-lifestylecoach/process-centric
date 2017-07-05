@@ -1,2 +1,2 @@
 # process-centric
-Process centric service for lifestylecoach
+Process centric service for main.lifestylecoach

@@ -2,7 +2,6 @@ package lifestylecoach.rest.resources;
 
 import com.google.gson.Gson;
 import lifestylecoach.business.BusinessClient;
-import lifestylecoach.rest.models.Measure;
 import lifestylecoach.storage.StorageClient;
 import lifestylecoach.ws.business.Business;
 import lifestylecoach.ws.business.MeasureType;
@@ -39,7 +38,7 @@ public class ResMeasure {
         Storage storage = storageClient.getStorage();
 
         List<lifestylecoach.ws.storage.Measure> measures = storage.getMeasureHistory(uid, type);
-        ArrayList<Measure> jsonMeasures = new ArrayList<Measure>();
+        ArrayList<lifestylecoach.rest.models.Measure> jsonMeasures = new ArrayList<lifestylecoach.rest.models.Measure>();
 
         Collections.reverse(measures);
 
@@ -48,7 +47,7 @@ public class ResMeasure {
         while (it.hasNext() && i < 15) {
             lifestylecoach.ws.storage.Measure measure = (lifestylecoach.ws.storage.Measure) it.next();
 
-            jsonMeasures.add(new Measure(uid,
+            jsonMeasures.add(new lifestylecoach.rest.models.Measure(uid,
                     measure.getMeasureType().getType(),
                     Float.toString(measure.getValue()),
                     measure.getDate()));
@@ -70,7 +69,7 @@ public class ResMeasure {
         System.out.println("/measure/new");
 
         Gson gson = new Gson();
-        Measure measure = gson.fromJson(text, Measure.class);
+        lifestylecoach.rest.models.Measure measure = gson.fromJson(text, lifestylecoach.rest.models.Measure.class);
 
         lifestylecoach.ws.business.Measure pMeasure = new lifestylecoach.ws.business.Measure();
         MeasureType type = new MeasureType();

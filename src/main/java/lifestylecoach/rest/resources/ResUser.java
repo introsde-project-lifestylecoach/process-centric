@@ -8,7 +8,6 @@ import lifestylecoach.rest.models.UserMeasure;
 import lifestylecoach.storage.StorageClient;
 import lifestylecoach.ws.business.Bmi;
 import lifestylecoach.ws.business.Business;
-import lifestylecoach.ws.business.Person;
 import lifestylecoach.ws.storage.Measure;
 import lifestylecoach.ws.storage.Storage;
 
@@ -35,7 +34,7 @@ public class ResUser {
         Gson gson = new Gson();
         User user = gson.fromJson(json, User.class);
 
-        Person person = new Person();
+        lifestylecoach.ws.business.Person person = new lifestylecoach.ws.business.Person();
 
         person.setIdPerson(user.uid);
         person.setFirstname(user.name);
