@@ -3,9 +3,9 @@ package lifestylecoach.rest.resources;
 import com.google.gson.Gson;
 import lifestylecoach.business.BusinessClient;
 import lifestylecoach.storage.StorageClient;
-import lifestylecoach.ws.business.Business;
-import lifestylecoach.ws.business.MeasureType;
-import lifestylecoach.ws.storage.Storage;
+import ws.business.Business;
+import ws.business.MeasureType;
+import ws.storage.Storage;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -37,7 +37,7 @@ public class ResMeasure {
         StorageClient storageClient = new StorageClient();
         Storage storage = storageClient.getStorage();
 
-        List<lifestylecoach.ws.storage.Measure> measures = storage.getMeasureHistory(uid, type);
+        List<ws.storage.Measure> measures = storage.getMeasureHistory(uid, type);
         ArrayList<lifestylecoach.rest.models.Measure> jsonMeasures = new ArrayList<lifestylecoach.rest.models.Measure>();
 
         Collections.reverse(measures);
@@ -45,7 +45,7 @@ public class ResMeasure {
         Iterator it = measures.iterator();
         int i = 0;
         while (it.hasNext() && i < 15) {
-            lifestylecoach.ws.storage.Measure measure = (lifestylecoach.ws.storage.Measure) it.next();
+            ws.storage.Measure measure = (ws.storage.Measure) it.next();
 
             jsonMeasures.add(new lifestylecoach.rest.models.Measure(uid,
                     measure.getMeasureType().getType(),
@@ -71,7 +71,7 @@ public class ResMeasure {
         Gson gson = new Gson();
         lifestylecoach.rest.models.Measure measure = gson.fromJson(text, lifestylecoach.rest.models.Measure.class);
 
-        lifestylecoach.ws.business.Measure pMeasure = new lifestylecoach.ws.business.Measure();
+        ws.business.Measure pMeasure = new ws.business.Measure();
         MeasureType type = new MeasureType();
         type.setType(measure.measureType);
 

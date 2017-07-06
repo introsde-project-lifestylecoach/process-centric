@@ -1,7 +1,7 @@
 package lifestylecoach.business;
 
-import lifestylecoach.ws.business.Business;
-import lifestylecoach.ws.business.BusinessService;
+import ws.business.Business;
+import ws.business.BusinessService;
 
 /**
  * Created by matteo on 19/06/17.

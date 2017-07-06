@@ -6,10 +6,10 @@ import lifestylecoach.rest.models.Success;
 import lifestylecoach.rest.models.User;
 import lifestylecoach.rest.models.UserMeasure;
 import lifestylecoach.storage.StorageClient;
-import lifestylecoach.ws.business.Bmi;
-import lifestylecoach.ws.business.Business;
-import lifestylecoach.ws.storage.Measure;
-import lifestylecoach.ws.storage.Storage;
+import ws.business.Bmi;
+import ws.business.Business;
+import ws.storage.Measure;
+import ws.storage.Storage;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -34,7 +34,7 @@ public class ResUser {
         Gson gson = new Gson();
         User user = gson.fromJson(json, User.class);
 
-        lifestylecoach.ws.business.Person person = new lifestylecoach.ws.business.Person();
+        ws.business.Person person = new ws.business.Person();
 
         person.setIdPerson(user.uid);
         person.setFirstname(user.name);
@@ -65,7 +65,7 @@ public class ResUser {
         StorageClient storageClient = new StorageClient();
         Storage storage = storageClient.getStorage();
 
-        lifestylecoach.ws.storage.Person person = storage.readPerson(id);
+        ws.storage.Person person = storage.readPerson(id);
 
         Gson gson = new Gson();
 
@@ -84,7 +84,7 @@ public class ResUser {
         StorageClient storageClient = new StorageClient();
         Storage storage = storageClient.getStorage();
 
-        lifestylecoach.ws.storage.Person person = storage.readPerson(id);
+        ws.storage.Person person = storage.readPerson(id);
         List<Measure> measures = storage.getLastMeasure(id);
 
         String height = "0";

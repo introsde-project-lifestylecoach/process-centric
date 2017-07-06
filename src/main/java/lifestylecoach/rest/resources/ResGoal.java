@@ -4,10 +4,10 @@ import com.google.gson.Gson;
 import lifestylecoach.business.BusinessClient;
 import lifestylecoach.rest.models.Goal;
 import lifestylecoach.rest.models.Success;
-import lifestylecoach.ws.business.Business;
-import lifestylecoach.ws.business.GoalBusiness;
-import lifestylecoach.ws.business.GoalType;
-import lifestylecoach.ws.business.MeasureType;
+import ws.business.Business;
+import ws.business.GoalBusiness;
+import ws.business.GoalType;
+import ws.business.MeasureType;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -66,7 +66,7 @@ public class ResGoal {
         Gson gson = new Gson();
         Goal newGoal = gson.fromJson(goaljson, Goal.class);
 
-        lifestylecoach.ws.business.Goal wsGoal = new lifestylecoach.ws.business.Goal();
+        ws.business.Goal wsGoal = new ws.business.Goal();
         wsGoal.setTitle(newGoal.title);
 
         wsGoal.setDescription(newGoal.description);
@@ -76,7 +76,6 @@ public class ResGoal {
         String cType = condition[0].toLowerCase();
         String cIncrease = condition[1];
         Float cValue = Float.valueOf(condition[2]);
-
 
         MeasureType measureType = new MeasureType();
         measureType.setType(cType);
@@ -131,7 +130,7 @@ public class ResGoal {
             List<Goal> goalsRest = new ArrayList<Goal>();
             while (it.hasNext()) {
                 GoalBusiness goalBusiness = (GoalBusiness) it.next();
-                lifestylecoach.ws.business.Goal goal = goalBusiness.getGoal();
+                ws.business.Goal goal = goalBusiness.getGoal();
 
                 String condition = "";
                 if (goal.getGoalType().getType().equals("increase"))
