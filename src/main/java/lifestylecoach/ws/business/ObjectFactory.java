@@ -8,17 +8,18 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each
- * Java content interface and Java element interface
- * generated in the lifestylecoach.ws.business package.
- * <p>An ObjectFactory allows you to programatically
- * construct new instances of the Java representation
- * for XML content. The Java representation of XML
- * content can consist of schema derived interfaces
- * and classes representing the binding of schema
- * type definitions, element declarations and model
- * groups.  Factory methods for each of these are
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the lifestylecoach.ws.business package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
  * provided in this class.
+ * 
  */
 @XmlRegistry
 public class ObjectFactory {
@@ -50,12 +51,14 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: lifestylecoach.ws.business
+     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link Person }
+     * 
      */
     public Person createPerson() {
         return new Person();
@@ -63,6 +66,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Bmi }
+     * 
      */
     public Bmi createBmi() {
         return new Bmi();
@@ -70,6 +74,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GoalType }
+     * 
      */
     public GoalType createGoalType() {
         return new GoalType();
@@ -77,6 +82,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Goal }
+     * 
      */
     public Goal createGoal() {
         return new Goal();
@@ -84,6 +90,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Measure }
+     * 
      */
     public Measure createMeasure() {
         return new Measure();
@@ -91,6 +98,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link MeasureType }
+     * 
      */
     public MeasureType createMeasureType() {
         return new MeasureType();
@@ -98,6 +106,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DeletePerson }
+     * 
      */
     public DeletePerson createDeletePerson() {
         return new DeletePerson();
@@ -105,6 +114,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GetBmi }
+     * 
      */
     public GetBmi createGetBmi() {
         return new GetBmi();
@@ -112,6 +122,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CreatePersonResponse }
+     * 
      */
     public CreatePersonResponse createCreatePersonResponse() {
         return new CreatePersonResponse();
@@ -119,6 +130,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DeleteGoalResponse }
+     * 
      */
     public DeleteGoalResponse createDeleteGoalResponse() {
         return new DeleteGoalResponse();
@@ -126,6 +138,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GetBmiResponse }
+     * 
      */
     public GetBmiResponse createGetBmiResponse() {
         return new GetBmiResponse();
@@ -133,6 +146,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UpdateGoalResponse }
+     * 
      */
     public UpdateGoalResponse createUpdateGoalResponse() {
         return new UpdateGoalResponse();
@@ -140,6 +154,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DeleteGoalByTitle }
+     * 
      */
     public DeleteGoalByTitle createDeleteGoalByTitle() {
         return new DeleteGoalByTitle();
@@ -147,6 +162,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CreatePerson }
+     * 
      */
     public CreatePerson createCreatePerson() {
         return new CreatePerson();
@@ -154,6 +170,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DeleteMeasure }
+     * 
      */
     public DeleteMeasure createDeleteMeasure() {
         return new DeleteMeasure();
@@ -161,6 +178,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UpdateGoal }
+     * 
      */
     public UpdateGoal createUpdateGoal() {
         return new UpdateGoal();
@@ -168,6 +186,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DeleteGoalByTitleResponse }
+     * 
      */
     public DeleteGoalByTitleResponse createDeleteGoalByTitleResponse() {
         return new DeleteGoalByTitleResponse();
@@ -175,6 +194,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UpdatePersonResponse }
+     * 
      */
     public UpdatePersonResponse createUpdatePersonResponse() {
         return new UpdatePersonResponse();
@@ -182,6 +202,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CreateGoalResponse }
+     * 
      */
     public CreateGoalResponse createCreateGoalResponse() {
         return new CreateGoalResponse();
@@ -189,6 +210,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DeletePersonResponse }
+     * 
      */
     public DeletePersonResponse createDeletePersonResponse() {
         return new DeletePersonResponse();
@@ -196,6 +218,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CreateMeasure }
+     * 
      */
     public CreateMeasure createCreateMeasure() {
         return new CreateMeasure();
@@ -203,6 +226,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UpdateMeasure }
+     * 
      */
     public UpdateMeasure createUpdateMeasure() {
         return new UpdateMeasure();
@@ -210,6 +234,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GetGoals }
+     * 
      */
     public GetGoals createGetGoals() {
         return new GetGoals();
@@ -217,6 +242,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CreateGoal }
+     * 
      */
     public CreateGoal createCreateGoal() {
         return new CreateGoal();
@@ -224,6 +250,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CreateMeasureResponse }
+     * 
      */
     public CreateMeasureResponse createCreateMeasureResponse() {
         return new CreateMeasureResponse();
@@ -231,6 +258,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DeleteGoal }
+     * 
      */
     public DeleteGoal createDeleteGoal() {
         return new DeleteGoal();
@@ -238,6 +266,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GetGoalsResponse }
+     * 
      */
     public GetGoalsResponse createGetGoalsResponse() {
         return new GetGoalsResponse();
@@ -245,6 +274,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UpdateMeasureResponse }
+     * 
      */
     public UpdateMeasureResponse createUpdateMeasureResponse() {
         return new UpdateMeasureResponse();
@@ -252,6 +282,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UpdatePerson }
+     * 
      */
     public UpdatePerson createUpdatePerson() {
         return new UpdatePerson();
@@ -259,6 +290,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DeleteMeasureResponse }
+     * 
      */
     public DeleteMeasureResponse createDeleteMeasureResponse() {
         return new DeleteMeasureResponse();
@@ -266,6 +298,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GoalBusiness }
+     * 
      */
     public GoalBusiness createGoalBusiness() {
         return new GoalBusiness();
@@ -273,6 +306,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Person.HealthProfile }
+     * 
      */
     public Person.HealthProfile createPersonHealthProfile() {
         return new Person.HealthProfile();
@@ -280,6 +314,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteMeasureResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "deleteMeasureResponse")
     public JAXBElement<DeleteMeasureResponse> createDeleteMeasureResponse(DeleteMeasureResponse value) {
@@ -288,6 +323,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePerson }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "updatePerson")
     public JAXBElement<UpdatePerson> createUpdatePerson(UpdatePerson value) {
@@ -296,6 +332,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalsResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "getGoalsResponse")
     public JAXBElement<GetGoalsResponse> createGetGoalsResponse(GetGoalsResponse value) {
@@ -304,6 +341,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdateMeasureResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "updateMeasureResponse")
     public JAXBElement<UpdateMeasureResponse> createUpdateMeasureResponse(UpdateMeasureResponse value) {
@@ -312,6 +350,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CreateGoal }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "createGoal")
     public JAXBElement<CreateGoal> createCreateGoal(CreateGoal value) {
@@ -320,6 +359,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CreateMeasureResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "createMeasureResponse")
     public JAXBElement<CreateMeasureResponse> createCreateMeasureResponse(CreateMeasureResponse value) {
@@ -328,6 +368,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteGoal }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "deleteGoal")
     public JAXBElement<DeleteGoal> createDeleteGoal(DeleteGoal value) {
@@ -336,6 +377,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetGoals }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "getGoals")
     public JAXBElement<GetGoals> createGetGoals(GetGoals value) {
@@ -344,6 +386,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CreateMeasure }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "createMeasure")
     public JAXBElement<CreateMeasure> createCreateMeasure(CreateMeasure value) {
@@ -352,6 +395,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdateMeasure }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "updateMeasure")
     public JAXBElement<UpdateMeasure> createUpdateMeasure(UpdateMeasure value) {
@@ -360,6 +404,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CreateGoalResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "createGoalResponse")
     public JAXBElement<CreateGoalResponse> createCreateGoalResponse(CreateGoalResponse value) {
@@ -368,6 +413,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeletePersonResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "deletePersonResponse")
     public JAXBElement<DeletePersonResponse> createDeletePersonResponse(DeletePersonResponse value) {
@@ -376,6 +422,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "updatePersonResponse")
     public JAXBElement<UpdatePersonResponse> createUpdatePersonResponse(UpdatePersonResponse value) {
@@ -384,6 +431,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteGoalByTitleResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "deleteGoalByTitleResponse")
     public JAXBElement<DeleteGoalByTitleResponse> createDeleteGoalByTitleResponse(DeleteGoalByTitleResponse value) {
@@ -392,6 +440,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteMeasure }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "deleteMeasure")
     public JAXBElement<DeleteMeasure> createDeleteMeasure(DeleteMeasure value) {
@@ -400,6 +449,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdateGoal }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "updateGoal")
     public JAXBElement<UpdateGoal> createUpdateGoal(UpdateGoal value) {
@@ -408,6 +458,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CreatePerson }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "createPerson")
     public JAXBElement<CreatePerson> createCreatePerson(CreatePerson value) {
@@ -416,6 +467,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteGoalByTitle }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "deleteGoalByTitle")
     public JAXBElement<DeleteGoalByTitle> createDeleteGoalByTitle(DeleteGoalByTitle value) {
@@ -424,6 +476,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetBmiResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "getBmiResponse")
     public JAXBElement<GetBmiResponse> createGetBmiResponse(GetBmiResponse value) {
@@ -432,6 +485,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdateGoalResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "updateGoalResponse")
     public JAXBElement<UpdateGoalResponse> createUpdateGoalResponse(UpdateGoalResponse value) {
@@ -440,6 +494,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CreatePersonResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "createPersonResponse")
     public JAXBElement<CreatePersonResponse> createCreatePersonResponse(CreatePersonResponse value) {
@@ -448,6 +503,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteGoalResponse }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "deleteGoalResponse")
     public JAXBElement<DeleteGoalResponse> createDeleteGoalResponse(DeleteGoalResponse value) {
@@ -456,6 +512,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeletePerson }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "deletePerson")
     public JAXBElement<DeletePerson> createDeletePerson(DeletePerson value) {
@@ -464,6 +521,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetBmi }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://webservice.business.lifecoach/", name = "getBmi")
     public JAXBElement<GetBmi> createGetBmi(GetBmi value) {

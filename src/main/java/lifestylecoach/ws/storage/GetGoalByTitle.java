@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per getGoalByTitle complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="getGoalByTitle">
  *   &lt;complexContent>
@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getGoalByTitle", propOrder = {
@@ -36,6 +38,7 @@ public class GetGoalByTitle {
 
     /**
      * Recupera il valore della proprietà personId.
+     * 
      */
     public int getPersonId() {
         return personId;
@@ -43,6 +46,7 @@ public class GetGoalByTitle {
 
     /**
      * Imposta il valore della proprietà personId.
+     * 
      */
     public void setPersonId(int value) {
         this.personId = value;
@@ -51,8 +55,10 @@ public class GetGoalByTitle {
     /**
      * Recupera il valore della proprietà title.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTitle() {
         return title;
@@ -61,8 +67,10 @@ public class GetGoalByTitle {
     /**
      * Imposta il valore della proprietà title.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTitle(String value) {
         this.title = value;

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per readMeasureTypeResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="readMeasureTypeResponse">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "readMeasureTypeResponse", propOrder = {
@@ -34,8 +36,10 @@ public class ReadMeasureTypeResponse {
     /**
      * Recupera il valore della proprietà measureType.
      *
-     * @return possible object is
-     * {@link MeasureType }
+     * @return
+     *     possible object is
+     *     {@link MeasureType }
+     *     
      */
     public MeasureType getMeasureType() {
         return measureType;
@@ -44,8 +48,10 @@ public class ReadMeasureTypeResponse {
     /**
      * Imposta il valore della proprietà measureType.
      *
-     * @param value allowed object is
-     *              {@link MeasureType }
+     * @param value
+     *     allowed object is
+     *     {@link MeasureType }
+     *     
      */
     public void setMeasureType(MeasureType value) {
         this.measureType = value;

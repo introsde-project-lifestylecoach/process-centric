@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per getIdMeasureTypeByTypeResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="getIdMeasureTypeByTypeResponse">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getIdMeasureTypeByTypeResponse", propOrder = {
@@ -33,6 +35,7 @@ public class GetIdMeasureTypeByTypeResponse {
 
     /**
      * Recupera il valore della proprietà idMeasureType.
+     * 
      */
     public int getIdMeasureType() {
         return idMeasureType;
@@ -40,6 +43,7 @@ public class GetIdMeasureTypeByTypeResponse {
 
     /**
      * Imposta il valore della proprietà idMeasureType.
+     * 
      */
     public void setIdMeasureType(int value) {
         this.idMeasureType = value;

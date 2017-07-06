@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per getGoalHistory complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="getGoalHistory">
  *   &lt;complexContent>
@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getGoalHistory", propOrder = {
@@ -36,6 +38,7 @@ public class GetGoalHistory {
 
     /**
      * Recupera il valore della proprietà personId.
+     * 
      */
     public int getPersonId() {
         return personId;
@@ -43,6 +46,7 @@ public class GetGoalHistory {
 
     /**
      * Imposta il valore della proprietà personId.
+     * 
      */
     public void setPersonId(int value) {
         this.personId = value;
@@ -51,8 +55,10 @@ public class GetGoalHistory {
     /**
      * Recupera il valore della proprietà measureTypeId.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getMeasureTypeId() {
         return measureTypeId;
@@ -61,8 +67,10 @@ public class GetGoalHistory {
     /**
      * Imposta il valore della proprietà measureTypeId.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setMeasureTypeId(String value) {
         this.measureTypeId = value;

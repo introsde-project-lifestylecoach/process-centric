@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per deleteMeasureResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="deleteMeasureResponse">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "deleteMeasureResponse", propOrder = {
@@ -33,6 +35,7 @@ public class DeleteMeasureResponse {
 
     /**
      * Recupera il valore della proprietà result.
+     * 
      */
     public int getResult() {
         return result;
@@ -40,6 +43,7 @@ public class DeleteMeasureResponse {
 
     /**
      * Imposta il valore della proprietà result.
+     * 
      */
     public void setResult(int value) {
         this.result = value;

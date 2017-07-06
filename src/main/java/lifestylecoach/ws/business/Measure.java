@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per measure complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="measure">
  *   &lt;complexContent>
@@ -25,6 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "measure", namespace = "http://webservice.localdb.lifecoach/", propOrder = {
@@ -43,8 +45,10 @@ public class Measure {
     /**
      * Recupera il valore della proprietà date.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDate() {
         return date;
@@ -53,8 +57,10 @@ public class Measure {
     /**
      * Imposta il valore della proprietà date.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDate(String value) {
         this.date = value;
@@ -62,6 +68,7 @@ public class Measure {
 
     /**
      * Recupera il valore della proprietà idMeasure.
+     * 
      */
     public int getIdMeasure() {
         return idMeasure;
@@ -69,6 +76,7 @@ public class Measure {
 
     /**
      * Imposta il valore della proprietà idMeasure.
+     * 
      */
     public void setIdMeasure(int value) {
         this.idMeasure = value;
@@ -77,8 +85,10 @@ public class Measure {
     /**
      * Recupera il valore della proprietà measureType.
      *
-     * @return possible object is
-     * {@link MeasureType }
+     * @return
+     *     possible object is
+     *     {@link MeasureType }
+     *     
      */
     public MeasureType getMeasureType() {
         return measureType;
@@ -87,8 +97,10 @@ public class Measure {
     /**
      * Imposta il valore della proprietà measureType.
      *
-     * @param value allowed object is
-     *              {@link MeasureType }
+     * @param value
+     *     allowed object is
+     *     {@link MeasureType }
+     *     
      */
     public void setMeasureType(MeasureType value) {
         this.measureType = value;
@@ -96,6 +108,7 @@ public class Measure {
 
     /**
      * Recupera il valore della proprietà value.
+     * 
      */
     public float getValue() {
         return value;
@@ -103,6 +116,7 @@ public class Measure {
 
     /**
      * Imposta il valore della proprietà value.
+     * 
      */
     public void setValue(float value) {
         this.value = value;

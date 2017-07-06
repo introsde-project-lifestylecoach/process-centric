@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per bmi complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="bmi">
  *   &lt;complexContent>
@@ -28,6 +28,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "bmi", namespace = "http://webservice.adaptor.lifecoach/", propOrder = {
@@ -56,8 +58,10 @@ public class Bmi {
     /**
      * Recupera il valore della proprietà bmiRisk.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getBmiRisk() {
         return bmiRisk;
@@ -66,8 +70,10 @@ public class Bmi {
     /**
      * Imposta il valore della proprietà bmiRisk.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setBmiRisk(String value) {
         this.bmiRisk = value;
@@ -76,8 +82,10 @@ public class Bmi {
     /**
      * Recupera il valore della proprietà bmiStatus.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getBmiStatus() {
         return bmiStatus;
@@ -86,8 +94,10 @@ public class Bmi {
     /**
      * Imposta il valore della proprietà bmiStatus.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setBmiStatus(String value) {
         this.bmiStatus = value;
@@ -95,6 +105,7 @@ public class Bmi {
 
     /**
      * Recupera il valore della proprietà bmiValue.
+     * 
      */
     public double getBmiValue() {
         return bmiValue;
@@ -102,6 +113,7 @@ public class Bmi {
 
     /**
      * Imposta il valore della proprietà bmiValue.
+     * 
      */
     public void setBmiValue(double value) {
         this.bmiValue = value;
@@ -109,6 +121,7 @@ public class Bmi {
 
     /**
      * Recupera il valore della proprietà bmrValue.
+     * 
      */
     public double getBmrValue() {
         return bmrValue;
@@ -116,6 +129,7 @@ public class Bmi {
 
     /**
      * Imposta il valore della proprietà bmrValue.
+     * 
      */
     public void setBmrValue(double value) {
         this.bmrValue = value;
@@ -124,8 +138,10 @@ public class Bmi {
     /**
      * Recupera il valore della proprietà idealWeight.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getIdealWeight() {
         return idealWeight;
@@ -134,8 +150,10 @@ public class Bmi {
     /**
      * Imposta il valore della proprietà idealWeight.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setIdealWeight(String value) {
         this.idealWeight = value;
@@ -144,8 +162,10 @@ public class Bmi {
     /**
      * Recupera il valore della proprietà whrStatus.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getWhrStatus() {
         return whrStatus;
@@ -154,8 +174,10 @@ public class Bmi {
     /**
      * Imposta il valore della proprietà whrStatus.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setWhrStatus(String value) {
         this.whrStatus = value;

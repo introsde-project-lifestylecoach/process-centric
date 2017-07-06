@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per updateMeasure complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="updateMeasure">
  *   &lt;complexContent>
@@ -24,6 +24,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "updateMeasure", propOrder = {
@@ -38,6 +40,7 @@ public class UpdateMeasure {
 
     /**
      * Recupera il valore della proprietà personId.
+     * 
      */
     public int getPersonId() {
         return personId;
@@ -45,6 +48,7 @@ public class UpdateMeasure {
 
     /**
      * Imposta il valore della proprietà personId.
+     * 
      */
     public void setPersonId(int value) {
         this.personId = value;
@@ -53,8 +57,10 @@ public class UpdateMeasure {
     /**
      * Recupera il valore della proprietà measure.
      *
-     * @return possible object is
-     * {@link Measure }
+     * @return
+     *     possible object is
+     *     {@link Measure }
+     *     
      */
     public Measure getMeasure() {
         return measure;
@@ -63,8 +69,10 @@ public class UpdateMeasure {
     /**
      * Imposta il valore della proprietà measure.
      *
-     * @param value allowed object is
-     *              {@link Measure }
+     * @param value
+     *     allowed object is
+     *     {@link Measure }
+     *     
      */
     public void setMeasure(Measure value) {
         this.measure = value;

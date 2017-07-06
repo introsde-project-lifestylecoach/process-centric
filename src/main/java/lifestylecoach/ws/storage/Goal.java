@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per goal complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="goal">
  *   &lt;complexContent>
@@ -28,6 +28,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "goal", namespace = "http://webservice.localdb.lifecoach/", propOrder = {
@@ -52,8 +54,10 @@ public class Goal {
     /**
      * Recupera il valore della proprietà date.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDate() {
         return date;
@@ -62,8 +66,10 @@ public class Goal {
     /**
      * Imposta il valore della proprietà date.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDate(String value) {
         this.date = value;
@@ -72,8 +78,10 @@ public class Goal {
     /**
      * Recupera il valore della proprietà description.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDescription() {
         return description;
@@ -82,8 +90,10 @@ public class Goal {
     /**
      * Imposta il valore della proprietà description.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDescription(String value) {
         this.description = value;
@@ -92,8 +102,10 @@ public class Goal {
     /**
      * Recupera il valore della proprietà goalType.
      *
-     * @return possible object is
-     * {@link GoalType }
+     * @return
+     *     possible object is
+     *     {@link GoalType }
+     *     
      */
     public GoalType getGoalType() {
         return goalType;
@@ -102,8 +114,10 @@ public class Goal {
     /**
      * Imposta il valore della proprietà goalType.
      *
-     * @param value allowed object is
-     *              {@link GoalType }
+     * @param value
+     *     allowed object is
+     *     {@link GoalType }
+     *     
      */
     public void setGoalType(GoalType value) {
         this.goalType = value;
@@ -111,6 +125,7 @@ public class Goal {
 
     /**
      * Recupera il valore della proprietà idGoal.
+     * 
      */
     public int getIdGoal() {
         return idGoal;
@@ -118,6 +133,7 @@ public class Goal {
 
     /**
      * Imposta il valore della proprietà idGoal.
+     * 
      */
     public void setIdGoal(int value) {
         this.idGoal = value;
@@ -126,8 +142,10 @@ public class Goal {
     /**
      * Recupera il valore della proprietà measureType.
      *
-     * @return possible object is
-     * {@link MeasureType }
+     * @return
+     *     possible object is
+     *     {@link MeasureType }
+     *     
      */
     public MeasureType getMeasureType() {
         return measureType;
@@ -136,8 +154,10 @@ public class Goal {
     /**
      * Imposta il valore della proprietà measureType.
      *
-     * @param value allowed object is
-     *              {@link MeasureType }
+     * @param value
+     *     allowed object is
+     *     {@link MeasureType }
+     *     
      */
     public void setMeasureType(MeasureType value) {
         this.measureType = value;
@@ -146,8 +166,10 @@ public class Goal {
     /**
      * Recupera il valore della proprietà title.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTitle() {
         return title;
@@ -156,8 +178,10 @@ public class Goal {
     /**
      * Imposta il valore della proprietà title.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTitle(String value) {
         this.title = value;
@@ -165,6 +189,7 @@ public class Goal {
 
     /**
      * Recupera il valore della proprietà value.
+     * 
      */
     public float getValue() {
         return value;
@@ -172,6 +197,7 @@ public class Goal {
 
     /**
      * Imposta il valore della proprietà value.
+     * 
      */
     public void setValue(float value) {
         this.value = value;

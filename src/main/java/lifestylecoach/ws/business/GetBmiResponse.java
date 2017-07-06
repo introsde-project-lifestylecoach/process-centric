@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per getBmiResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="getBmiResponse">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getBmiResponse", propOrder = {
@@ -34,8 +36,10 @@ public class GetBmiResponse {
     /**
      * Recupera il valore della proprietà bmi.
      *
-     * @return possible object is
-     * {@link Bmi }
+     * @return
+     *     possible object is
+     *     {@link Bmi }
+     *     
      */
     public Bmi getBmi() {
         return bmi;
@@ -44,8 +48,10 @@ public class GetBmiResponse {
     /**
      * Imposta il valore della proprietà bmi.
      *
-     * @param value allowed object is
-     *              {@link Bmi }
+     * @param value
+     *     allowed object is
+     *     {@link Bmi }
+     *     
      */
     public void setBmi(Bmi value) {
         this.bmi = value;

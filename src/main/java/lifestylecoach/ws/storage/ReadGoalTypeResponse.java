@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per readGoalTypeResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="readGoalTypeResponse">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "readGoalTypeResponse", propOrder = {
@@ -34,8 +36,10 @@ public class ReadGoalTypeResponse {
     /**
      * Recupera il valore della proprietà goalType.
      *
-     * @return possible object is
-     * {@link GoalType }
+     * @return
+     *     possible object is
+     *     {@link GoalType }
+     *     
      */
     public GoalType getGoalType() {
         return goalType;
@@ -44,8 +48,10 @@ public class ReadGoalTypeResponse {
     /**
      * Imposta il valore della proprietà goalType.
      *
-     * @param value allowed object is
-     *              {@link GoalType }
+     * @param value
+     *     allowed object is
+     *     {@link GoalType }
+     *     
      */
     public void setGoalType(GoalType value) {
         this.goalType = value;

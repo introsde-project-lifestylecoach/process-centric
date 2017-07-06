@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per readGoalType complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="readGoalType">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "readGoalType", propOrder = {
@@ -33,6 +35,7 @@ public class ReadGoalType {
 
     /**
      * Recupera il valore della proprietà goalId.
+     * 
      */
     public int getGoalId() {
         return goalId;
@@ -40,6 +43,7 @@ public class ReadGoalType {
 
     /**
      * Imposta il valore della proprietà goalId.
+     * 
      */
     public void setGoalId(int value) {
         this.goalId = value;

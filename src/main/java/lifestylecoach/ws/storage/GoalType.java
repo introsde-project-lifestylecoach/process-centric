@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per goalType complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="goalType">
  *   &lt;complexContent>
@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "goalType", namespace = "http://webservice.localdb.lifecoach/", propOrder = {
@@ -36,6 +38,7 @@ public class GoalType {
 
     /**
      * Recupera il valore della proprietà idGoalType.
+     * 
      */
     public int getIdGoalType() {
         return idGoalType;
@@ -43,6 +46,7 @@ public class GoalType {
 
     /**
      * Imposta il valore della proprietà idGoalType.
+     * 
      */
     public void setIdGoalType(int value) {
         this.idGoalType = value;
@@ -51,8 +55,10 @@ public class GoalType {
     /**
      * Recupera il valore della proprietà type.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getType() {
         return type;
@@ -61,8 +67,10 @@ public class GoalType {
     /**
      * Imposta il valore della proprietà type.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setType(String value) {
         this.type = value;

@@ -11,9 +11,9 @@ import java.util.List;
 
 /**
  * <p>Classe Java per person complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="person">
  *   &lt;complexContent>
@@ -42,6 +42,8 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "person", namespace = "http://webservice.localdb.lifecoach/", propOrder = {
@@ -68,8 +70,10 @@ public class Person {
     /**
      * Recupera il valore della proprietà birthdate.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getBirthdate() {
         return birthdate;
@@ -78,8 +82,10 @@ public class Person {
     /**
      * Imposta il valore della proprietà birthdate.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setBirthdate(String value) {
         this.birthdate = value;
@@ -88,8 +94,10 @@ public class Person {
     /**
      * Recupera il valore della proprietà firstname.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getFirstname() {
         return firstname;
@@ -98,8 +106,10 @@ public class Person {
     /**
      * Imposta il valore della proprietà firstname.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setFirstname(String value) {
         this.firstname = value;
@@ -107,6 +117,7 @@ public class Person {
 
     /**
      * Recupera il valore della proprietà hip.
+     * 
      */
     public float getHip() {
         return hip;
@@ -114,6 +125,7 @@ public class Person {
 
     /**
      * Imposta il valore della proprietà hip.
+     * 
      */
     public void setHip(float value) {
         this.hip = value;
@@ -121,6 +133,7 @@ public class Person {
 
     /**
      * Recupera il valore della proprietà idPerson.
+     * 
      */
     public int getIdPerson() {
         return idPerson;
@@ -128,6 +141,7 @@ public class Person {
 
     /**
      * Imposta il valore della proprietà idPerson.
+     * 
      */
     public void setIdPerson(int value) {
         this.idPerson = value;
@@ -136,8 +150,10 @@ public class Person {
     /**
      * Recupera il valore della proprietà lastname.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLastname() {
         return lastname;
@@ -146,8 +162,10 @@ public class Person {
     /**
      * Imposta il valore della proprietà lastname.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setLastname(String value) {
         this.lastname = value;
@@ -156,8 +174,10 @@ public class Person {
     /**
      * Recupera il valore della proprietà healthProfile.
      *
-     * @return possible object is
-     * {@link Person.HealthProfile }
+     * @return
+     *     possible object is
+     *     {@link Person.HealthProfile }
+     *     
      */
     public Person.HealthProfile getHealthProfile() {
         return healthProfile;
@@ -166,8 +186,10 @@ public class Person {
     /**
      * Imposta il valore della proprietà healthProfile.
      *
-     * @param value allowed object is
-     *              {@link Person.HealthProfile }
+     * @param value
+     *     allowed object is
+     *     {@link Person.HealthProfile }
+     *     
      */
     public void setHealthProfile(Person.HealthProfile value) {
         this.healthProfile = value;
@@ -176,8 +198,10 @@ public class Person {
     /**
      * Recupera il valore della proprietà sex.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getSex() {
         return sex;
@@ -186,8 +210,10 @@ public class Person {
     /**
      * Imposta il valore della proprietà sex.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setSex(String value) {
         this.sex = value;
@@ -195,6 +221,7 @@ public class Person {
 
     /**
      * Recupera il valore della proprietà waist.
+     * 
      */
     public float getWaist() {
         return waist;
@@ -202,6 +229,7 @@ public class Person {
 
     /**
      * Imposta il valore della proprietà waist.
+     * 
      */
     public void setWaist(float value) {
         this.waist = value;
@@ -210,9 +238,9 @@ public class Person {
 
     /**
      * <p>Classe Java per anonymous complex type.
-     * <p>
+     * 
      * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
-     * <p>
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -224,6 +252,8 @@ public class Person {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
+     *
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -236,23 +266,25 @@ public class Person {
 
         /**
          * Gets the value of the measure property.
-         * <p>
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the measure property.
-         * <p>
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMeasure().add(newItem);
          * </pre>
-         * <p>
-         * <p>
+         *
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Measure }
+         *
+         * 
          */
         public List<Measure> getMeasure() {
             if (measure == null) {

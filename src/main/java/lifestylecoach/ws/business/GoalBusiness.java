@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per goalBusiness complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="goalBusiness">
  *   &lt;complexContent>
@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "goalBusiness", propOrder = {
@@ -36,6 +38,7 @@ public class GoalBusiness {
 
     /**
      * Recupera il valore della proprietà done.
+     * 
      */
     public boolean isDone() {
         return done;
@@ -43,6 +46,7 @@ public class GoalBusiness {
 
     /**
      * Imposta il valore della proprietà done.
+     * 
      */
     public void setDone(boolean value) {
         this.done = value;
@@ -51,8 +55,10 @@ public class GoalBusiness {
     /**
      * Recupera il valore della proprietà goal.
      *
-     * @return possible object is
-     * {@link Goal }
+     * @return
+     *     possible object is
+     *     {@link Goal }
+     *     
      */
     public Goal getGoal() {
         return goal;
@@ -61,8 +67,10 @@ public class GoalBusiness {
     /**
      * Imposta il valore della proprietà goal.
      *
-     * @param value allowed object is
-     *              {@link Goal }
+     * @param value
+     *     allowed object is
+     *     {@link Goal }
+     *     
      */
     public void setGoal(Goal value) {
         this.goal = value;

@@ -10,9 +10,9 @@ import java.util.List;
 
 /**
  * <p>Classe Java per getMeasureTypeListResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="getMeasureTypeListResponse">
  *   &lt;complexContent>
@@ -24,6 +24,8 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getMeasureTypeListResponse", propOrder = {
@@ -35,23 +37,25 @@ public class GetMeasureTypeListResponse {
 
     /**
      * Gets the value of the measureTypeList property.
-     * <p>
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the measureTypeList property.
-     * <p>
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMeasureTypeList().add(newItem);
      * </pre>
-     * <p>
-     * <p>
+     *
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link MeasureType }
+     *
+     * 
      */
     public List<MeasureType> getMeasureTypeList() {
         if (measureTypeList == null) {

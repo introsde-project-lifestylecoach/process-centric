@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per createMeasureResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="createMeasureResponse">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "createMeasureResponse", propOrder = {
@@ -33,6 +35,7 @@ public class CreateMeasureResponse {
 
     /**
      * Recupera il valore della proprietà measureId.
+     * 
      */
     public int getMeasureId() {
         return measureId;
@@ -40,6 +43,7 @@ public class CreateMeasureResponse {
 
     /**
      * Imposta il valore della proprietà measureId.
+     * 
      */
     public void setMeasureId(int value) {
         this.measureId = value;

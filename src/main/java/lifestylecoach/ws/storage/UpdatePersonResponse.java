@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per updatePersonResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="updatePersonResponse">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "updatePersonResponse", propOrder = {
@@ -33,6 +35,7 @@ public class UpdatePersonResponse {
 
     /**
      * Recupera il valore della proprietà personId.
+     * 
      */
     public int getPersonId() {
         return personId;
@@ -40,6 +43,7 @@ public class UpdatePersonResponse {
 
     /**
      * Imposta il valore della proprietà personId.
+     * 
      */
     public void setPersonId(int value) {
         this.personId = value;

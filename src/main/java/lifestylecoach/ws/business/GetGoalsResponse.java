@@ -10,9 +10,9 @@ import java.util.List;
 
 /**
  * <p>Classe Java per getGoalsResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="getGoalsResponse">
  *   &lt;complexContent>
@@ -24,6 +24,8 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getGoalsResponse", propOrder = {
@@ -35,23 +37,25 @@ public class GetGoalsResponse {
 
     /**
      * Gets the value of the listGoalBusiness property.
-     * <p>
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the listGoalBusiness property.
-     * <p>
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getListGoalBusiness().add(newItem);
      * </pre>
-     * <p>
-     * <p>
+     *
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link GoalBusiness }
+     *
+     * 
      */
     public List<GoalBusiness> getListGoalBusiness() {
         if (listGoalBusiness == null) {

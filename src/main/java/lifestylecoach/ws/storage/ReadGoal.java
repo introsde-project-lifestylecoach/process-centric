@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per readGoal complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="readGoal">
  *   &lt;complexContent>
@@ -24,6 +24,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "readGoal", propOrder = {
@@ -39,6 +41,7 @@ public class ReadGoal {
 
     /**
      * Recupera il valore della proprietà personId.
+     * 
      */
     public int getPersonId() {
         return personId;
@@ -46,6 +49,7 @@ public class ReadGoal {
 
     /**
      * Imposta il valore della proprietà personId.
+     * 
      */
     public void setPersonId(int value) {
         this.personId = value;
@@ -54,8 +58,10 @@ public class ReadGoal {
     /**
      * Recupera il valore della proprietà measureTypeId.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getMeasureTypeId() {
         return measureTypeId;
@@ -64,8 +70,10 @@ public class ReadGoal {
     /**
      * Imposta il valore della proprietà measureTypeId.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setMeasureTypeId(String value) {
         this.measureTypeId = value;
@@ -73,6 +81,7 @@ public class ReadGoal {
 
     /**
      * Recupera il valore della proprietà goalId.
+     * 
      */
     public int getGoalId() {
         return goalId;
@@ -80,6 +89,7 @@ public class ReadGoal {
 
     /**
      * Imposta il valore della proprietà goalId.
+     * 
      */
     public void setGoalId(int value) {
         this.goalId = value;

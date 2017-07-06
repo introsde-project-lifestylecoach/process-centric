@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per deleteGoalByTitle complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="deleteGoalByTitle">
  *   &lt;complexContent>
@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "deleteGoalByTitle", propOrder = {
@@ -36,6 +38,7 @@ public class DeleteGoalByTitle {
 
     /**
      * Recupera il valore della proprietà goalId.
+     * 
      */
     public int getGoalId() {
         return goalId;
@@ -43,6 +46,7 @@ public class DeleteGoalByTitle {
 
     /**
      * Imposta il valore della proprietà goalId.
+     * 
      */
     public void setGoalId(int value) {
         this.goalId = value;
@@ -51,8 +55,10 @@ public class DeleteGoalByTitle {
     /**
      * Recupera il valore della proprietà title.
      *
-     * @return possible object is
-     * {@link String }
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTitle() {
         return title;
@@ -61,8 +67,10 @@ public class DeleteGoalByTitle {
     /**
      * Imposta il valore della proprietà title.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTitle(String value) {
         this.title = value;

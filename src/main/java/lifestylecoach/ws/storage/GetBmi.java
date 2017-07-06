@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per getBmi complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="getBmi">
  *   &lt;complexContent>
@@ -28,6 +28,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getBmi", propOrder = {
@@ -50,6 +52,7 @@ public class GetBmi {
 
     /**
      * Recupera il valore della proprietà weight.
+     * 
      */
     public float getWeight() {
         return weight;
@@ -57,6 +60,7 @@ public class GetBmi {
 
     /**
      * Imposta il valore della proprietà weight.
+     * 
      */
     public void setWeight(float value) {
         this.weight = value;
@@ -64,6 +68,7 @@ public class GetBmi {
 
     /**
      * Recupera il valore della proprietà height.
+     * 
      */
     public float getHeight() {
         return height;
@@ -71,6 +76,7 @@ public class GetBmi {
 
     /**
      * Imposta il valore della proprietà height.
+     * 
      */
     public void setHeight(float value) {
         this.height = value;
@@ -78,6 +84,7 @@ public class GetBmi {
 
     /**
      * Recupera il valore della proprietà sex.
+     * 
      */
     public int getSex() {
         return sex;
@@ -85,6 +92,7 @@ public class GetBmi {
 
     /**
      * Imposta il valore della proprietà sex.
+     * 
      */
     public void setSex(int value) {
         this.sex = value;
@@ -92,6 +100,7 @@ public class GetBmi {
 
     /**
      * Recupera il valore della proprietà age.
+     * 
      */
     public int getAge() {
         return age;
@@ -99,6 +108,7 @@ public class GetBmi {
 
     /**
      * Imposta il valore della proprietà age.
+     * 
      */
     public void setAge(int value) {
         this.age = value;
@@ -106,6 +116,7 @@ public class GetBmi {
 
     /**
      * Recupera il valore della proprietà waist.
+     * 
      */
     public float getWaist() {
         return waist;
@@ -113,6 +124,7 @@ public class GetBmi {
 
     /**
      * Imposta il valore della proprietà waist.
+     * 
      */
     public void setWaist(float value) {
         this.waist = value;
@@ -120,6 +132,7 @@ public class GetBmi {
 
     /**
      * Recupera il valore della proprietà hip.
+     * 
      */
     public float getHip() {
         return hip;
@@ -127,6 +140,7 @@ public class GetBmi {
 
     /**
      * Imposta il valore della proprietà hip.
+     * 
      */
     public void setHip(float value) {
         this.hip = value;

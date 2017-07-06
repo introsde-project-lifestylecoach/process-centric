@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java per readPersonResponse complex type.
- * <p>
+ * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="readPersonResponse">
  *   &lt;complexContent>
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "readPersonResponse", propOrder = {
@@ -34,8 +36,10 @@ public class ReadPersonResponse {
     /**
      * Recupera il valore della proprietà person.
      *
-     * @return possible object is
-     * {@link Person }
+     * @return
+     *     possible object is
+     *     {@link Person }
+     *     
      */
     public Person getPerson() {
         return person;
@@ -44,8 +48,10 @@ public class ReadPersonResponse {
     /**
      * Imposta il valore della proprietà person.
      *
-     * @param value allowed object is
-     *              {@link Person }
+     * @param value
+     *     allowed object is
+     *     {@link Person }
+     *     
      */
     public void setPerson(Person value) {
         this.person = value;
