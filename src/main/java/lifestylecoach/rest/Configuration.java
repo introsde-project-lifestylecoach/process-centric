@@ -8,9 +8,9 @@ import javax.ws.rs.ApplicationPath;
  * Created by matteo on 10/05/17.
  */
 
-@ApplicationPath("main.lifestylecoach-process-centric")
+@ApplicationPath("lifestylecoach-process-centric")
 public class Configuration extends ResourceConfig {
     public Configuration() {
-        packages("main.lifestylecoach.rest");
+        packages("lifestylecoach.rest");
     }
 }

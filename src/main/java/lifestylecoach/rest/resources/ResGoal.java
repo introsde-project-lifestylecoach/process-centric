@@ -117,7 +117,7 @@ public class ResGoal {
         List<GoalBusiness> goals = null;
         try {
             goals = business.getGoals(uid);
-        } catch (com.sun.xml.internal.ws.fault.ServerSOAPFaultException e) {
+        } catch (Exception e) {
             System.err.println(e.getMessage());
             isEmpty = true;
         }

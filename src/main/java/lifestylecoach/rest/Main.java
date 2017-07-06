@@ -25,9 +25,9 @@ public class Main {
             hostname = "localhost";
         }
 
-        URI BASE_URI = new URI(protocol + hostname + port + "main.lifestylecoach-process-centric/");
+        URI BASE_URI = new URI(protocol + hostname + port + "lifestylecoach-process-centric/");
 
-        System.out.println("Starting main.lifestylecoach-process-centric standalone HTTP server...");
+        System.out.println("Starting lifestylecoach-process-centric standalone HTTP server...");
         JdkHttpServerFactory.createHttpServer(BASE_URI, createApp());
         System.out.println("Server started on " + BASE_URI + "\n[kill the process to exit]");
     }
