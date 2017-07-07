@@ -25,7 +25,8 @@ public class ResGoal {
     @GET
     @Produces("application/json")
     public String show() {
-        return "{ \"hello\" : \"TODO show goals\" }"; //TODO
+        System.out.println(":: GOAL GET RECIEVED : /goal");
+        return "Welcome to goal!";
     }
 
     @GET
@@ -33,10 +34,11 @@ public class ResGoal {
     @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public String deleteGoal(@PathParam("uid") Integer uid, @PathParam("title") String title) {
+
+        System.out.println(":: GOAL GET RECIEVED : /goal/delete/" + uid + "/" + title);
+
         BusinessClient businessClient = new BusinessClient();
         Business business = businessClient.getBusiness();
-
-        System.out.println("delete goal");
 
         Gson gson = new Gson();
         if (business.deleteGoalByTitle(uid, title.replace("_", " ")) == 0)
@@ -50,12 +52,9 @@ public class ResGoal {
     @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public String newGoal(@PathParam("uid") Integer uid, @PathParam("oldTitle") String oldTitle, String goaljson) {
-        //TODO new person
 
-        System.out.println("======================");
-        System.out.println(uid);
-        System.out.println(oldTitle);
-        System.out.println(goaljson);
+        System.out.println(":: GOAL POST RECIEVED : /goal/new/" + uid + "/" + oldTitle);
+        System.out.println("\t JSON -> " + goaljson);
 
         //CALL BUSINESS SERVICE
         BusinessClient businessClient = new BusinessClient();
@@ -85,15 +84,6 @@ public class ResGoal {
         goalType.setType(cIncrease);
         wsGoal.setGoalType(goalType);
 
-        System.out.println("======================");
-        System.out.println(wsGoal.getIdGoal());
-        System.out.println(wsGoal.getDate());
-        System.out.println(wsGoal.getDescription());
-        System.out.println(wsGoal.getGoalType().getType());
-        System.out.println(wsGoal.getMeasureType().getType());
-        System.out.println(wsGoal.getTitle());
-        System.out.println(wsGoal.getValue());
-        System.out.println(uid + " " + oldTitle);
 
         if (business.updateGoal(uid, wsGoal, oldTitle) == 0)
             return gson.toJson(new Success(true));
@@ -106,6 +96,8 @@ public class ResGoal {
     @Path("show/{id}")
     @Produces("application/json")
     public String showGoals(@PathParam("id") Integer uid) {
+
+        System.out.println(":: GOAL GET RECIEVED : /goal/show/" + uid);
 
         BusinessClient businessClient = new BusinessClient();
         Business business = businessClient.getBusiness();

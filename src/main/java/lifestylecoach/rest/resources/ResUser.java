@@ -29,7 +29,8 @@ public class ResUser {
     @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public String newUser(String json) {
 
-        System.out.println(json);
+        System.out.println(":: USER POST RECIEVED : /user/new/");
+        System.out.println("\t JSON -> " + json);
 
         Gson gson = new Gson();
         User user = gson.fromJson(json, User.class);
@@ -58,14 +59,14 @@ public class ResUser {
     @GET
     @Path("exist/{id}")
     @Produces("application/json")
-    public String existUser(@PathParam("id") Integer id) {
+    public String existUser(@PathParam("id") Integer uid) {
 
-        System.out.println("Check user " + id);
+        System.out.println(":: USER GET RECIEVED : /user/exist/" + uid);
 
         StorageClient storageClient = new StorageClient();
         Storage storage = storageClient.getStorage();
 
-        ws.storage.Person person = storage.readPerson(id);
+        ws.storage.Person person = storage.readPerson(uid);
 
         Gson gson = new Gson();
 
@@ -78,14 +79,15 @@ public class ResUser {
     @GET
     @Path("profile/{id}")
     @Produces("application/json")
-    public String getProfile(@PathParam("id") Integer id) {
+    public String getProfile(@PathParam("id") Integer uid) {
 
-        System.out.println("seeprofile id : " + id);
+        System.out.println(":: USER GET RECIEVED : /user/profile/" + uid);
+
         StorageClient storageClient = new StorageClient();
         Storage storage = storageClient.getStorage();
 
-        ws.storage.Person person = storage.readPerson(id);
-        List<Measure> measures = storage.getLastMeasure(id);
+        ws.storage.Person person = storage.readPerson(uid);
+        List<Measure> measures = storage.getLastMeasure(uid);
 
         String height = "0";
         String weight = "0";
@@ -117,6 +119,8 @@ public class ResUser {
     @Path("bmi/{id}")
     @Produces("application/json")
     public String getBmi(@PathParam("id") Integer uid) {
+
+        System.out.println(":: USER GET RECIEVED : /user/bmi/" + uid);
 
         BusinessClient businessClient = new BusinessClient();
         Business business = businessClient.getBusiness();

@@ -24,15 +24,16 @@ public class ResMeasure {
     @GET
     @Produces("application/json")
     public String show() {
-        System.out.println("/measure");
-        return "{ \"hello\" : \"TODO show measure\" }"; //TODO
+        System.out.println(":: MEASURE GET RECIEVED : /measure");
+        return "Welcome to measure!";
     }
 
     @GET
     @Path("show/{id}/{type}")
     @Produces("application/json")
     public String showByType(@PathParam("id") Integer uid, @PathParam("type") String type) {
-        System.out.println("/measure/new" + type);
+
+        System.out.println(":: MEASURE GET RECIEVED : /measure/show+/" + uid + "/" + type);
 
         StorageClient storageClient = new StorageClient();
         Storage storage = storageClient.getStorage();
@@ -55,7 +56,6 @@ public class ResMeasure {
         }
 
         Gson gson = new Gson();
-        System.out.println(gson.toJson(jsonMeasures, jsonMeasures.getClass()));
         return gson.toJson(jsonMeasures, jsonMeasures.getClass());
     }
 
@@ -63,13 +63,13 @@ public class ResMeasure {
     @Path("new")
     @Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Consumes({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public String newMeasure(String text) {
+    public String newMeasure(String measurejson) {
 
-        System.out.println(text);
-        System.out.println("/measure/new");
+        System.out.println(":: MEASURE POST RECIEVED : /measure/new");
+        System.out.println("\t JSON -> " + measurejson);
 
         Gson gson = new Gson();
-        lifestylecoach.rest.models.Measure measure = gson.fromJson(text, lifestylecoach.rest.models.Measure.class);
+        lifestylecoach.rest.models.Measure measure = gson.fromJson(measurejson, lifestylecoach.rest.models.Measure.class);
 
         ws.business.Measure pMeasure = new ws.business.Measure();
         MeasureType type = new MeasureType();
@@ -85,6 +85,6 @@ public class ResMeasure {
 
         business.createMeasure(measure.uid, pMeasure);
 
-        return "TODO";
+        return "";
     }
 }
