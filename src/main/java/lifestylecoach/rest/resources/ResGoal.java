@@ -43,9 +43,7 @@ public class ResGoal {
             return gson.toJson(new Success(true));
         else
             return gson.toJson(new Success(false));
-
     }
-
 
     @POST
     @Path("new/{uid}/{oldTitle}")
